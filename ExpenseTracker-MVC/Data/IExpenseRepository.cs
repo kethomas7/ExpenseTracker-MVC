@@ -12,5 +12,9 @@ namespace ExpenseTracker_MVC.Data
         public void InsertExpense(Expense expense);//why doesnt it return an expense
         public IEnumerable<Category> GetCategories();// gets all the catergoies
         Expense AssignCategory();// assigns all the categories to an expense
+
+        public void DeleteExpense(Expense expense);
+
+
     }
 }

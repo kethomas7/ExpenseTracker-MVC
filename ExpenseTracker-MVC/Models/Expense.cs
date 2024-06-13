@@ -8,6 +8,8 @@
         public DateTime Date { get; set; }
         public int CategoryID { get; set; }
 
+        public string CategoryName { get; set; }
+
         public IEnumerable<Category> Categories { get; set;}
     }
 }

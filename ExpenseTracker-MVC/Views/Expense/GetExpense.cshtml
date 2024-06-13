@@ -8,6 +8,7 @@
         <th>Name</th>
         <th>Amount</th>
         <th>Date</th>
+        <th>Category</th>
    
     </tr>
     <tr>
@@ -15,10 +16,22 @@
         <td>@Model.ExpenseName</td>
         <td>@Model.Amount</td>
         <td>@Model.Date</td>
+        <td>@Model.CategoryName</td>
     
     </tr>
 </table>
 
 <div style="display: block">
     <a href="/Expense/UpdateExpense/@Model.ExpenseID">Update this Expense</a>
+</div>
+
+
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteExpense", "Expense", "Post"))
+    {
+        <input type="hidden" asp-for="ExpenseID" value="@Model.ExpenseID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Expense" />
+    }
 </div>

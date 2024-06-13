@@ -49,5 +49,11 @@ namespace ExpenseTracker_MVC.Controllers
             repo.InsertExpense(expenseToInsert);
             return RedirectToAction("Index");
         }
+
+        public IActionResult DeleteExpense(Expense expense)
+        {
+            repo.DeleteExpense(expense);
+            return RedirectToAction("Index");
+        }
     }
 }

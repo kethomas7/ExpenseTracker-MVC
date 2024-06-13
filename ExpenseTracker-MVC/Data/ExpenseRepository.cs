@@ -24,7 +24,9 @@ namespace ExpenseTracker_MVC.Data
 
         public IEnumerable<Expense> GetAllExpenses()
         {
-            return _connection.Query<Expense>("SELECT * FROM expenses ORDER BY Date;");
+            return _connection.Query<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID Order By Date;");
+
+         //   return _connection.Query<Expense>("SELECT * FROM expenses ORDER BY Date;");
         }
 
         public IEnumerable<Category> GetCategories()
@@ -35,7 +37,7 @@ namespace ExpenseTracker_MVC.Data
 
         public Expense GetExpense(int id)
         {
-            return _connection.QuerySingle<Expense>("SELECT * FROM expenses WHERE ExpenseID = @id", new { id });
+            return _connection.QuerySingle<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID WHERE ExpenseID = @id", new { id });
         }
 
         public void InsertExpense(Expense expense)
@@ -51,6 +53,11 @@ namespace ExpenseTracker_MVC.Data
             _connection.Execute("UPDATE expenses SET ExpenseName = @expenseName, Amount = @amount, Date = @date WHERE ExpenseID = @id;", new { expenseName = expense.ExpenseName, amount = expense.Amount, date = expense.Date, id = expense.ExpenseID });
         }
 
-       
+        public void DeleteExpense(Expense expense)
+        {
+            _connection.Execute("DELETE from expenses WHERE ExpenseID = @id;", new {id = expense.ExpenseID});
+        }
+
+
     }
 }
