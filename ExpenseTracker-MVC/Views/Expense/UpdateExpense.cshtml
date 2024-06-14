@@ -1,6 +1,6 @@
 ﻿@model Expense
 
-<h2>Update @Model.ExpenseName</h2>
+<h2 class ="text-center">Update @Model.ExpenseName</h2>
 
 @using (Html.BeginForm("UpdateExpenseToDatabase", "Expense", "Post"))
 {
@@ -16,7 +16,7 @@
     <input type="text" name="Date" class="form-control" value="@Model.Date" />
 
 
-    <input type="submit" value="Update Expense" class="btn btn-primary" />
+    <button class="button" role="button" type="submit">Update Expense</button>
 }
 
 

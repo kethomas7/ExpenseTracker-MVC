@@ -1,7 +1,7 @@
 ﻿@model Expense
 
 
-<h2>Add a New Expense</h2>
+<h2 class="text-center">Add a New Expense</h2>
 
 @using (Html.BeginForm("InsertExpenseToDatabase", "Expense", "Post"))
 {
@@ -27,5 +27,6 @@
         </select>
     </div>
 
-    <input type="submit" value="Add Expense" class="btn btn-primary" />
+
+    <button class="button" role="button" type="submit">Add Expense</button>
 }
