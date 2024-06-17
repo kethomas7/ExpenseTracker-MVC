@@ -55,5 +55,11 @@ namespace ExpenseTracker_MVC.Controllers
             repo.DeleteExpense(expense);
             return RedirectToAction("Index");
         }
+
+        public IActionResult SortExpenses(int id) 
+        {
+            var sortedExpenses = repo.SortExpenses(id);
+            return View(sortedExpenses);
+        }
     }
 }

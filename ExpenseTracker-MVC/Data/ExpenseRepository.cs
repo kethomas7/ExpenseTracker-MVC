@@ -58,6 +58,10 @@ namespace ExpenseTracker_MVC.Data
             _connection.Execute("DELETE from expenses WHERE ExpenseID = @id;", new {id = expense.ExpenseID});
         }
 
+        public IEnumerable<Expense> SortExpenses(int catId) 
+        {
 
+            return _connection.Query<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID WHERE categories.CategoryID = @catId Order By Date;", new {catId});
+        }
     }
 }

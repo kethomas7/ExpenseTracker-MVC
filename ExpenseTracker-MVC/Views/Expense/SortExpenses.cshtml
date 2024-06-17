@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Expense>
+
+<h2 class="text-center"> Expenses</h2>
+
+
+
+<table class="table">
+    <tr>
+        <th>Expense ID</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Category</th>
+       
+        
+    </tr>
+
+    @foreach (var expense in @Model)
+    {
+        <tr>
+            <td>@expense.ExpenseID</td>
+            <td>@expense.ExpenseName</td>
+            <td>@expense.Amount</td>
+            <td>@expense.Date.ToString("MM/dd/yyyy")</td>
+            <td>@expense.CategoryName</td>
+
+        </tr>
+    }
+
+</table>
+
+<div>
+
+    <a class="button" href="/Expense/Index">Back</a>
+
+</div>
+
+

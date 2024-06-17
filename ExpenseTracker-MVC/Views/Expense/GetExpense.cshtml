@@ -21,17 +21,21 @@
     </tr>
 </table>
 
-<div style="display: block">
+
+<div class="buttons">
+
+<div style="display: inline">
+
     <a class="button" href="/Expense/UpdateExpense/@Model.ExpenseID">Update this Expense</a>
 </div>
 
 
-
-<div style="display: block">
-
+<div style="display: inline">
     @using (Html.BeginForm("DeleteExpense", "Expense", "Post"))
     {
         <input type="hidden" asp-for="ExpenseID" value="@Model.ExpenseID" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Expense" />
+        <button class="button" role="button" type="submit" onclick="return confirm('Are you sure?')">Delete this Expense </button>
     }
+</div>
+
 </div>

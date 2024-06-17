@@ -9,11 +9,13 @@ namespace ExpenseTracker_MVC.Data
         public Expense GetExpense(int id);
         public void UpdateExpense(Expense expense);
 
-        public void InsertExpense(Expense expense);//why doesnt it return an expense
+        public void InsertExpense(Expense expense);
         public IEnumerable<Category> GetCategories();// gets all the catergoies
         Expense AssignCategory();// assigns all the categories to an expense
 
         public void DeleteExpense(Expense expense);
+
+        public IEnumerable<Expense> SortExpenses(int catId); 
 
 
     }
