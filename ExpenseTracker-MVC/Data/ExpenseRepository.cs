@@ -42,8 +42,8 @@ namespace ExpenseTracker_MVC.Data
 
         public void InsertExpense(Expense expense)
         {
-            _connection.Execute("INSERT INTO expenses (ExpenseName, Amount, Date,CategoryID) VALUES (@expenseName, @amount, @date, @categoryID);", new{ expenseName = expense.ExpenseName, amount = expense.Amount, categoryID = expense.CategoryID, date = expense.Date
-            });
+           
+                _connection.Execute("INSERT INTO expenses (ExpenseName, Amount, Date,CategoryID) VALUES (@expenseName, @amount, @date, @categoryID);", new { expenseName = expense.ExpenseName, amount = expense.Amount, categoryID = expense.CategoryID, date = expense.Date });
         }
 
        

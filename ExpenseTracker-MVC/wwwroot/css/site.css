@@ -196,3 +196,9 @@ h1 {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+
+* {
+    font-family: "Acme", sans-serif;
+}
+
