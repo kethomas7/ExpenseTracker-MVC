@@ -15,8 +15,9 @@ namespace ExpenseTracker_MVC.Data
 
         public void DeleteExpense(Expense expense);
 
-        public IEnumerable<Expense> SortExpenses(int catId); 
+        public IEnumerable<Expense> SortExpenses(int catId);
 
+        public IEnumerable<Expense> SearchExpenses(string searchString);
 
     }
 }

@@ -61,5 +61,11 @@ namespace ExpenseTracker_MVC.Controllers
             var sortedExpenses = repo.SortExpenses(id);
             return View(sortedExpenses);
         }
+
+        public IActionResult SearchExpenses(string searchString)
+        {
+            var searchResults = repo.SearchExpenses(searchString);
+            return View(searchResults);
+        }
     }
 }

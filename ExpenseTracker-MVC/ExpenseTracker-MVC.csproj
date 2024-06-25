@@ -8,8 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Expense\SearchExpenses.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.35" />
     <PackageReference Include="MySql.Data" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Expense\SearchExpenses.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Expense\SearchExpenses.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Expense\SearchExpenses.cshtml" />
   </ItemGroup>
 
 </Project>
