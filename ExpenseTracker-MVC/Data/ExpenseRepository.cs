@@ -66,7 +66,7 @@ namespace ExpenseTracker_MVC.Data
 
         public IEnumerable<Expense> SearchExpenses(string searchString)
         {
-            return _connection.Query<Expense>("SELECT * FROM expenses WHERE ExpenseName LIKE @name;", new { name = "%" + searchString + "%" });
+            return _connection.Query<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID WHERE ExpenseName LIKE @name;", new { name = "%" + searchString + "%" });
         }
     }
 }

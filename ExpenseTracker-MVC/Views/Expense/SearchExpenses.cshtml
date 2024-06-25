@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Expense>
 
 <h2 class="text-center">Expenses</h2>
-@* 
+@*
 <div style="display: block">
     <a class="button" href="/Expense/AddExpense/">Add a New Expense</a>
 </div>
@@ -10,8 +10,9 @@
 @using (Html.BeginForm("SearchExpenses", "Expense", FormMethod.Get))
 {
     <p> Find by name: @Html.TextBox("searchString")</p>
-    <input type="submit" value="Search" />
+    <input id="search-bt" type="submit" value="Search" />
 }
+
 
 
 <table class="table">
@@ -43,7 +44,7 @@
     <a class="button" href="/Expense/Index">Back</a>
 
 </div>
-@* 
+@*
 <div class="dropdown">
     <button class="dropbtn">Sort by Category</button>
     <div class="dropdown-content">
