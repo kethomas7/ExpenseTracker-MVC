@@ -1,7 +1,10 @@
 
+  
+  
+
 # ExpenseMate
 
-ExpenseMate is a web application that allows users to track their expenses comprehensively. Users can view all their expenses, add new ones, update existing entries, delete unnecessary expenses, and sort them by category. The project is built using the ASP.NET MVC framework, leveraging C# for backend logic and SQL for database operations. It connects to a MySQL database using Dapper ORM for efficient data access, and the frontend is styled with HTML and CSS.
+**ExpenseMate** is a web application that allows users to comprehensively track their expenses. Users can view all their expenses, add new ones, update existing entries, delete unnecessary expenses, sort them by category, and search for specific expenses using keywords. The project is built using the ASP.NET MVC framework, leveraging C# for backend logic and SQL for database operations. It connects to a MySQL database using Dapper ORM for efficient data access, and the frontend is styled with HTML and CSS.
   
 
 ## This project demonstrates proficiency in
@@ -14,10 +17,14 @@ ExpenseMate is a web application that allows users to track their expenses compr
 
  ### **Features**
 
+  
+
 * **Create:** Add a new expense to the tracker database, enter the expense name, amount, date, and category.
 * **Read:** View all expenses in the database.
 * **Update:** Edit an existing expense.
 * **Delete:** Remove an expense from the database.
+* **Sort:** Group  and view expenses by category.
+* **Search:**  Look up specific expenses by entering a keyword
 
 ### Technologies
 
@@ -29,8 +36,17 @@ ExpenseMate is a web application that allows users to track their expenses compr
 * HTML: Markup language for creating web pages.
 * CSS: Style sheet language for designing the web application.
 
+  
+
+
+
+
+  
 
 ## How to Use
+
+  
+
 1.  Clone this repository.
 2.  Download and run this mock database setup file in MySQL:  [CreateExpenseTrackerDB](https://drive.google.com/file/d/1JK7j9pREUf5r2OHGO_b8B2n0JyWLmMLz/view?usp=sharing).
 3.  Create an appsettings.json file in the project with this format:
@@ -39,7 +55,7 @@ ExpenseMate is a web application that allows users to track their expenses compr
 
 {
   "ConnectionStrings": {
-  "bestbuy": "Server=probablyLocalhost;Database=expensetracker;uid=probablyRoot;Pwd=yourPasswordHere;Port=3306;"
+  "expensetracker": "Server=probablyLocalhost;Database=expensetracker;uid=probablyRoot;Pwd=yourPasswordHere;Port=3306;"
   },
   "Logging": {
   "LogLevel": {
@@ -51,7 +67,7 @@ ExpenseMate is a web application that allows users to track their expenses compr
 
 ```
 
-4.  Configure the connection string in  `appsettings.json`  to point to your MySQL instance of the database.
+  4.  Configure the connection string in  `appsettings.json`  to point to your MySQL instance of the database.
 5.  Build and run the application.
 
 
@@ -59,6 +75,8 @@ ExpenseMate is a web application that allows users to track their expenses compr
   
 
 ## Contact
+
+  
 
 * Email:  [kaitlynthomas2416@gmail.com](mailto:kaitlynthomas2416@gmail.com)
 * GitHub:  [Kaitlyn Thomas](https://github.com/kethomas7)
