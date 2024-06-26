@@ -15,7 +15,7 @@
         <td>@Model.ExpenseID</td>
         <td>@Model.ExpenseName</td>
         <td>@Model.Amount</td>
-        <td>@Model.Date</td>
+        <td>@Model.Date.ToString("MM/dd/yyyy")</td>
         <td>@Model.CategoryName</td>
     
     </tr>
@@ -37,5 +37,5 @@
         <button class="button" role="button" type="submit" onclick="return confirm('Are you sure?')">Delete this Expense </button>
     }
 </div>
-
+    <a class="button" href="/Expense/Index">Back</a>
 </div>

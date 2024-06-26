@@ -2,18 +2,20 @@
 
 <h2 class="text-center">Expenses</h2>
 
-<div style="display: block">
-    <a class="button" href="/Expense/AddExpense/">Add a New Expense</a>
-</div>
 
 
 @using (Html.BeginForm("SearchExpenses","Expense",FormMethod.Get))
 {
-    <p> Find by name: @Html.TextBox("searchString")</p>
-    <button class="button" role="button" type="submit">Search</button>
+    <p id="textbox"> Find by name: @Html.TextBox("searchString")
+        <button class="button" role="button" type="submit">Search</button>
+    </p>
 
    
 }
+
+<div style="display: block">
+    <a class="button" href="/Expense/AddExpense/">Add a New Expense</a>
+</div>
 
 
 <table class="table">
@@ -41,16 +43,15 @@
 
 </table>
 
-
-    <div class="dropdown">
-        <button class="dropbtn">Sort by Category</button>
-        <div class="dropdown-content">
+<div class="dropdown">
+    <button class="dropbtn">Sort by Category</button>
+    <div class="dropdown-content">
         <a href="/Expense/SortExpenses/1">Food</a>
         <a href="/Expense/SortExpenses/2">Housing</a>
         <a href="/Expense/SortExpenses/3">Utilities</a>
         <a href="/Expense/SortExpenses/4">Entertainment</a>
         <a href="/Expense/SortExpenses/5">Other</a>
-        </div>
     </div>
-
+</div>
+ 
  

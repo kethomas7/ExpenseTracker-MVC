@@ -34,104 +34,6 @@ h1 {
     font-weight: bold;
 }
 
-<!-- HTML ! -->
-
-/* CSS */
-.button-19 {
-    appearance: button;
-    background-color: #1899D6;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: din-round,sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0;
-    outline: none;
-    overflow: visible;
-    padding: 13px 16px;
-    text-align: center;
-    text-transform: uppercase;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.button-19:after {
-    background-clip: padding-box;
-    background-color: #1CB0F6;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-.button-19:main,
-.button-19:focus {
-    user-select: auto;
-}
-
-.button-19:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-}
-
-.button-19:disabled {
-    cursor: auto;
-}
-
-.button-19:active {
-    border-width: 4px 0 0;
-    background: none;
-}
-
-<!-- HTML ! -->
-
-/* CSS */
-.button-88 {
-    display: flex;
-    align-items: center;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 0.7em 1.4em 0.7em 1.1em;
-    color: white;
-    background: #ad5389;
-    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
-    border: none;
-    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-    letter-spacing: 0.05em;
-    border-radius: 20em;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-}
-
-.button-88:hover {
-    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
-}
-
-.button-88:active {
-    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
-}
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -146,7 +48,8 @@ h1 {
 }
 
     .button:hover {
-        background-color: #F8F8FF; /* Change color on hover */
+        background-color: #fff; /* Button background color */
+        color: #007bff; /* Text color */ /*Change color on hover */
     }
 
 .buttons {
@@ -154,6 +57,7 @@ h1 {
     flex-direction: row; 
     justify-content: space-between;
 }
+
 
 .dropbtn {
     background-color: #4CAF50;
@@ -202,6 +106,4 @@ h1 {
     font-family: "Acme", sans-serif;
 }
 
-.search-bt{
-    position:fixed
-}
+

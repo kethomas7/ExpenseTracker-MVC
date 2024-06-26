@@ -26,7 +26,7 @@ namespace ExpenseTracker_MVC.Data
         {
             return _connection.Query<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID Order By Date;");
 
-         //   return _connection.Query<Expense>("SELECT * FROM expenses ORDER BY Date;");
+         
         }
 
         public IEnumerable<Category> GetCategories()
