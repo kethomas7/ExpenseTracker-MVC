@@ -202,4 +202,6 @@ h1 {
     font-family: "Acme", sans-serif;
 }
 
-.search-bt
+.search-bt{
+    position:fixed
+}

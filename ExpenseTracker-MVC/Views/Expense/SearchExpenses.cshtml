@@ -10,10 +10,9 @@
 @using (Html.BeginForm("SearchExpenses", "Expense", FormMethod.Get))
 {
     <p> Find by name: @Html.TextBox("searchString")</p>
-    <input id="search-bt" type="submit" value="Search" />
+    <button class="button" role="button" type="submit">Search</button>
+
 }
-
-
 
 <table class="table">
     <tr>
