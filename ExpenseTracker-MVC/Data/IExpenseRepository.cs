@@ -11,7 +11,7 @@ namespace ExpenseTracker_MVC.Data
 
         public void InsertExpense(Expense expense);
         public IEnumerable<Category> GetCategories();
-        Expense AssignCategory();
+        public Expense AssignCategory();
 
         public void DeleteExpense(Expense expense);
 

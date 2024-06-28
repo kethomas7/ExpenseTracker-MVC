@@ -4,7 +4,7 @@ using System.Data;
 
 namespace ExpenseTracker_MVC.Data
 {
-    public class ExpenseRepository:IExpenseRepository
+    public class ExpenseRepository : IExpenseRepository
     {
         private readonly IDbConnection _connection;
 
@@ -19,21 +19,21 @@ namespace ExpenseTracker_MVC.Data
             var expense = new Expense();
             expense.Categories = categoryList;
             return expense;
-            
+
         }
 
         public IEnumerable<Expense> GetAllExpenses()
         {
             return _connection.Query<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID Order By Date;");
 
-         
+
         }
 
         public IEnumerable<Category> GetCategories()
         {
             return _connection.Query<Category>("SELECT * FROM categories;");
         }
-    
+
 
         public Expense GetExpense(int id)
         {
@@ -42,11 +42,11 @@ namespace ExpenseTracker_MVC.Data
 
         public void InsertExpense(Expense expense)
         {
-           
-                _connection.Execute("INSERT INTO expenses (ExpenseName, Amount, Date,CategoryID) VALUES (@expenseName, @amount, @date, @categoryID);", new { expenseName = expense.ExpenseName, amount = expense.Amount, categoryID = expense.CategoryID, date = expense.Date });
+
+            _connection.Execute("INSERT INTO expenses (ExpenseName, Amount, Date,CategoryID) VALUES (@expenseName, @amount, @date, @categoryID);", new { expenseName = expense.ExpenseName, amount = expense.Amount, categoryID = expense.CategoryID, date = expense.Date });
         }
 
-       
+
 
         public void UpdateExpense(Expense expense)
         {
@@ -55,13 +55,13 @@ namespace ExpenseTracker_MVC.Data
 
         public void DeleteExpense(Expense expense)
         {
-            _connection.Execute("DELETE from expenses WHERE ExpenseID = @id;", new {id = expense.ExpenseID});
+            _connection.Execute("DELETE from expenses WHERE ExpenseID = @id;", new { id = expense.ExpenseID });
         }
 
-        public IEnumerable<Expense> SortExpenses(int catId) 
+        public IEnumerable<Expense> SortExpenses(int catId)
         {
 
-            return _connection.Query<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID WHERE categories.CategoryID = @catId Order By Date;", new {catId});
+            return _connection.Query<Expense>("SELECT ExpenseID, ExpenseName, amount, Date, categories.CategoryID, CategoryName FROM expenses JOIN categories ON expenses.CategoryID = categories.CategoryID WHERE categories.CategoryID = @catId Order By Date;", new { catId });
         }
 
         public IEnumerable<Expense> SearchExpenses(string searchString)

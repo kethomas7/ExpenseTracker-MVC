@@ -18,7 +18,7 @@
     @foreach (var expense in @Model)
     {
         <tr>
-            <td>@expense.ExpenseID</td>
+            <td><a href=/Expense/GetExpense/@expense.ExpenseID>@expense.ExpenseID</a></td>
             <td>@expense.ExpenseName</td>
             <td>@expense.Amount</td>
             <td>@expense.Date.ToString("MM/dd/yyyy")</td>
