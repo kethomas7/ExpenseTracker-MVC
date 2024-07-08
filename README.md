@@ -48,7 +48,7 @@
   
 
 1.  Clone this repository.
-2.  Download and run this mock database setup file in MySQL:  [CreateExpenseTrackerDB](https://drive.google.com/file/d/1JK7j9pREUf5r2OHGO_b8B2n0JyWLmMLz/view?usp=sharing).
+2.  Download and run this mock database setup file in MySQL:  [CreateExpenseTrackerDB](https://drive.google.com/file/d/1N-Roo6LoTOOyummie1Q_jpITpcTHXhug/view?usp=sharing).
 3.  Create an appsettings.json file in the project with this format:
 
 ```
